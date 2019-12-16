@@ -94,7 +94,7 @@ namespace Api.Tests.Services
         public void ValidateAsync_When_InCorrect_Returns_False()
         {
             var result = _service.ValidateAsync(new FooBarResult { Number = 5, Result = "5" }).Result;
-            result.Should().Be(true);
+            result.Should().Be(false);
         }
 
         [Fact]

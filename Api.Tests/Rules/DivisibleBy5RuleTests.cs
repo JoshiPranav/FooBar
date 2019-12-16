@@ -20,7 +20,7 @@ namespace Api.Tests.Rules
         public void ApplyRuleAsync_When_Not_15_Returns_False()
         {
             var divRule = new DivisibleBy5Rule();
-            var result = divRule.ApplyRuleAsync(15).Result;
+            var result = divRule.ApplyRuleAsync(16).Result;
             result.Should().BeOfType<DivisibilityResult>();
             result.IsHandled.Should().Be(false);
             result.Result.Should().BeNullOrEmpty();
