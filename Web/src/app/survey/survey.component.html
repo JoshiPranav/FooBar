@@ -1,0 +1,2 @@
+<app-question [surveyQuestion]="currentQuestion" (answerSelected)="onAnswerSelected($event)"></app-question>
+<button class="mt-2 btn btn-primary btn" (click)="goToNextQuestion()" [disabled]="selectedAnswer == null">{{ currentQuestionIndex == this.survey?.surveyQuestions.length - 1 ? "Submit" : "Next" }}</button>

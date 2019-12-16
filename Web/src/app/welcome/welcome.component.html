@@ -1,0 +1,7 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="form-group required">
+        <label class="control-label" for="nickname">Nickname</label>
+        <input type="text" class="form-control" id="nickname" name="nickname" placeholder="eg: John" required ngModel>
+        <button type="submit" class="mt-2 btn btn-primary btn" [disabled]="!f.form.valid">Start</button>
+    </div>
+</form>

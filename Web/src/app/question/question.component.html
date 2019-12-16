@@ -1,0 +1,13 @@
+<div class="form-group required">
+    <label class="control-label">
+        {{surveyQuestion?.questionText}}
+    </label>
+</div>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <div class="mr-3" *ngFor="let item of surveyQuestion?.surveyQuestionAnswers">
+            <input type="radio" [(ngModel)]="selectedAnswer" name="list_name" value="{{item.id}}" (change)="selectAnswer(item)" />
+            <label class="control-label ml-1" for="{{item.id}}">{{item.answerText}}</label>
+        </div>
+    </div>
+</div>
